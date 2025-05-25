@@ -29,7 +29,7 @@ YTrain = cellfun(@(x) imresize(x, [64 64]), YTrain, 'UniformOutput', false);
 % inputImage1 = imresize(inputImage1, [64 64]);   % Inputimage is 120 x 120
 N = 19; % N为训练集样本数
 XTrain_samples = XTrain(1:N); % Noisy images as input
-YTrain_samples = XTrain(1:N); % Clean images as ground truth
+YTrain_samples = YTrain(1:N); % Clean images as ground truth
 
 % Step 3: U-Net Architecture Definition
 inputSize = [64 64 1]; % 需要修改网络架构，满足120*120图片输入（解决数据集问题）
